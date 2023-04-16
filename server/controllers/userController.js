@@ -84,7 +84,7 @@ exports.update = (req, res) => {
         // When done with the connection, release it
         
         if (!err) {
-          res.render('edit-user', { rows, alert: `Usuário atualizado.` });
+          res.render('edit-user', { rows, alert: 'Funcionário atualizado.' });
         } else {
           console.log(err);
         }
