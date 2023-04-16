@@ -49,7 +49,7 @@ exports.create = (req, res) => {
   // User connection
   connection.query('INSERT INTO user SET first_name = ?, last_name = ?, email = ?, phone = ?, comments = ?', [first_name, last_name, email, phone, comments], (err, rows) => {
     if (!err) {
-      res.render('add-user', { alert: 'User added successfully.' });
+      res.render('add-user', { alert: 'Funcionário cadastrado com sucesso.' });
     } else {
       console.log(err);
     }
@@ -84,7 +84,7 @@ exports.update = (req, res) => {
         // When done with the connection, release it
         
         if (!err) {
-          res.render('edit-user', { rows, alert: `${first_name} has been updated.` });
+          res.render('edit-user', { rows, alert: `${first_name} foi atualizado.` });
         } else {
           console.log(err);
         }
